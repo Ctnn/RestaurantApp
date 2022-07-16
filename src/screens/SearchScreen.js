@@ -1,10 +1,12 @@
 import React from "react";
 import {View,Text,StyleSheet} from 'react-native';
+import SearchBar from "../components/SearchBar";
 
 function SearchScreen(){
     return <View>
 <Text>
-    Search Screen
+    <SearchBar/>
+
 </Text>
 
     </View>;
