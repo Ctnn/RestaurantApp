@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import {View,Text,StyleSheet} from 'react-native';
 import SearchBar from "../components/SearchBar";
 
-function SearchScreen(){
-    return <View>
-<Text>
-    <SearchBar/>
+const SearchScreen = ()=>{
+    const [term, setTerm] = useState('');
 
-</Text>
+ 
 
-    </View>;
-}
+    return (
+        <View>
+          <SearchBar 
+          term={term} 
+          onTermChange={newTerm => setTerm(newTerm)}
+          onTermSubmit={()=>console.log('asd')}
+          />
+          <Text>Search Screen</Text>
+          <Text>{term}</Text>
+        </View>
+      );  
+};
+const styles = StyleSheet.create({});
 
 export default SearchScreen;
