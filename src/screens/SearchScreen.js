@@ -10,13 +10,13 @@ const SearchScreen = () => {
     //buradaki [] nedeni api içerisindeki 'bussiness:[] içerisindeki
     //verileri çekerek onları kullanmak adına yapılan bir useState
 
-  const searchApi = async () => {
+  const searchApi = async (searchTerm) => {
     //async or yelp.get('/seach').then but first option make sense
     try {
       const response = await yelp.get('/search', {
         params: {
           limit: 50,
-          term,
+          term:searchTerm,
           location: 'ankara'
         }
       });
@@ -26,9 +26,17 @@ const SearchScreen = () => {
     }
   };
 
+  //Call searchApi when component
+  //is first rendered. BAD CODE !
+  // searchapi('pasta')
+  //It would be run a many mant times
+
   return (
     <View>
-      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={searchApi} />
+      <SearchBar term={term}
+       onTermChange={setTerm}
+       onTermSubmit={searchApi(term)} />
+
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>We have found {results.length} results</Text>
     </View>
