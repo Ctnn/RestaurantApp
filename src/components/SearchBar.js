@@ -3,6 +3,7 @@ import {View,TextInput,StyleSheet} from 'react-native';
 import {Feather} from '@expo/vector-icons';
 //İstediğini curly'ye yaz
 
+
 const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
