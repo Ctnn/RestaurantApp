@@ -40,6 +40,7 @@ const SearchScreen =()=> {
        results={filterREsultsByPrice('$$')}
         title="Bit Pricier"
         />
+        
       <ResultsList results={filterREsultsByPrice('$$$')} 
        title="Big Spender"
        />
