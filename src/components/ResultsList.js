@@ -4,6 +4,7 @@ import ResultsDetail from '../components/ResultsDetail';
 import { withNavigation } from "react-navigation";
 
 const ResultsList = ({ title, results,navigation }) => {
+ 
     return (
       <View>
         <Text style={styles.title}>{title}</Text>

@@ -29,7 +29,7 @@ export default ()=>{
     
     //Call searchApi when component
     //is first rendered. BAD CODE !
-    // searchapi('pasta')
+    // searchapi('cake')
     //It would be run a many mant times
     useEffect(() => {
       searchApi('cake');
