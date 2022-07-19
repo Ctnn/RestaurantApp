@@ -32,7 +32,7 @@ export default ()=>{
     // searchapi('pasta')
     //It would be run a many mant times
     useEffect(() => {
-      searchApi('pasta');
+      searchApi('cake');
     }, []);
 return [searchApi,results,errorMessage];  
 };
