@@ -12,13 +12,13 @@ const SearchScreen = () => {
 
   const searchApi = async searchTerm => {
     //async or yelp.get('/seach').then but first option make sense
-    console.log('Hi there!');
+
     try {
       const response = await yelp.get('/search', {
         params: {
           limit: 50,
           term: searchTerm,
-          location: 'san jose'
+          location: 'ankara'
         }
       });
       setResults(response.data.businesses);
@@ -34,7 +34,7 @@ const SearchScreen = () => {
   // searchapi('pasta')
   //It would be run a many mant times
   useEffect(() => {
-    searchApi('pasta');
+    searchApi('makarna');
   }, []);
 
   return (
